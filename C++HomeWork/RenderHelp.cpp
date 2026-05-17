@@ -1,0 +1,176 @@
+#include "RenderHelp.h"
+#include <wincodec.h>//파일변환때 필요한 라이브러리
+#include <iostream>
+
+#pragma comment(lib, "windowscodecs.lib")  // WIC 라이브러리
+#pragma comment(lib, "msimg32.lib")        // AlphaBlend 함수가 포함된 라이브러리
+
+#ifdef _DEBUG
+#define DBG_NEW new ( _NORMAL_BLOCK , __FILE__ , __LINE__ )
+// Replace _NORMAL_BLOCK with _CLIENT_BLOCK if you want the
+// allocations to be of _CLIENT_BLOCK type
+#else
+#define DBG_NEW new
+#endif
+
+namespace renderHelp
+{
+    struct WICInitializer
+    {
+        WICInitializer() = default;
+
+        ~WICInitializer()
+        {
+            if (m_pFactory)
+            {
+                m_pFactory->Release();
+                m_pFactory = nullptr;
+            }
+            CoUninitialize();
+        }
+
+        bool Initialize()
+        {
+            m_LastError = CoCreateInstance(
+                CLSID_WICImagingFactory, nullptr, CLSCTX_INPROC_SERVER, IID_PPV_ARGS(&m_pFactory));
+            //여기서 포인터인지 이중포인터인지 찾아보시오
+
+            if (FAILED(m_LastError))
+            {
+                m_pFactory = nullptr;
+                return false;
+            }
+            
+            
+
+            return true;
+        }
+        bool LoadImageFromFile(__in LPCWSTR filename, __out HBITMAP& hBitmap)
+        {
+            hBitmap = nullptr;
+            if (m_pFactory == nullptr)
+            {
+                m_LastError = E_FAIL;
+                return false;
+            }
+
+            m_LastError = m_pFactory->CreateDecoderFromFilename(//디코더를 팩토리로
+                filename, nullptr, GENERIC_READ,
+                WICDecodeMetadataCacheOnLoad, &m_pDecoder);
+
+            if (FAILED(m_LastError))//계속 하나씩 실패시 플래그를 세운다.
+            {
+                return false;
+            }
+            m_LastError = m_pDecoder->GetFrame(0, &m_pFrame);//프레임을 디코더로
+            if (FAILED(m_LastError))
+            {
+                return false;
+            }
+            m_LastError = m_pFactory->CreateFormatConverter(&m_pConverter);//컨버터도 팩토리로
+            if (FAILED(m_LastError))
+            {
+                return false;
+            }
+
+            //이미지를 로드하는데 필요한 객체들을 생성해 달라고 요청
+            //초기화가 필요한 녀석은 초기화까지.
+            m_LastError = m_pConverter->Initialize(m_pFrame, GUID_WICPixelFormat32bppPBGRA,
+                WICBitmapDitherTypeNone, nullptr, 0.0f,
+                WICBitmapPaletteTypeCustom);
+
+            if (FAILED(m_LastError))
+            {
+                return false;
+            }
+
+            UINT width = 0, height = 0;
+            m_LastError = m_pFrame->GetSize(&width, &height);//프레임의 가로세로
+
+            if (FAILED(m_LastError))
+            {
+                return false;
+            }
+            BITMAPINFO bmi = { 0 };
+            bmi.bmiHeader.biSize = sizeof(BITMAPINFOHEADER);
+            bmi.bmiHeader.biWidth = width; // 비트맵 너비
+            bmi.bmiHeader.biHeight = -static_cast<LONG>(height); // top-down DIB
+            bmi.bmiHeader.biPlanes = 1; // 비트맵 평면 수
+            bmi.bmiHeader.biBitCount = 32; // 32bpp
+            bmi.bmiHeader.biCompression = BI_RGB; // 압축 없음
+
+            void* pvImageBits = nullptr;
+            HDC hdc = GetDC(nullptr);
+            hBitmap = CreateDIBSection(hdc, &bmi, DIB_RGB_COLORS, &pvImageBits, nullptr, 0);
+            ReleaseDC(nullptr, hdc);
+
+            if (FAILED(m_LastError))
+            {
+                return false;
+            }
+
+            // 비트맵에 픽셀 복사 (32bppPBGRA로 변환)
+            m_LastError = m_pConverter->CopyPixels(nullptr, width * 4, width * height * 4, (BYTE*)pvImageBits);
+
+            if (FAILED(m_LastError))
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        HRESULT GetLastError() const
+        {
+            return m_LastError;
+        }
+
+        void Clean()
+        {
+            if (m_pDecoder) m_pDecoder->Release();
+            if (m_pFrame) m_pFrame->Release();
+            if (m_pConverter) m_pConverter->Release();
+        }
+
+        BitmapInfo* CreateBitmapInfo(HBITMAP hBitmap)
+        {
+            BitmapInfo* pNewBitmap = new BitmapInfo(hBitmap);
+
+            return pNewBitmap;
+        }
+
+        HRESULT m_LastError = S_OK; //이런식으로 디버깅하는 식도 있다.
+
+        IWICImagingFactory* m_pFactory = nullptr;//팩토리
+        IWICBitmapDecoder* m_pDecoder = nullptr;//디코더
+        IWICBitmapFrameDecode* m_pFrame = nullptr;//프레임디코더
+        IWICFormatConverter* m_pConverter = nullptr;//컨버터
+
+        // WICInitializer는 복사할 수 없도록 삭제합니다.
+        WICInitializer(const WICInitializer&) = delete;
+        WICInitializer& operator=(const WICInitializer&) = delete;
+    }GWICInitializer;//전역변수
+
+    //WICInitializer aaa;//위의 애랑 이 변수랑 같은 의미임. 전역변수인거 알려주려고 저렇게 작성한것
+
+
+    BitmapInfo* CreateBitmapInfo(LPCWSTR filename)
+    {
+        static bool bCoInit = GWICInitializer.Initialize();//초기화
+        if (false == bCoInit)
+        {
+            return nullptr;
+        }
+
+        HBITMAP hBitmap = nullptr;
+        BitmapInfo* pBitmapInfo = nullptr;
+        if (GWICInitializer.LoadImageFromFile(filename, hBitmap))//로드 이미지 파일
+        {
+            pBitmapInfo = GWICInitializer.CreateBitmapInfo(hBitmap);
+        }
+
+        GWICInitializer.Clean();
+
+        return pBitmapInfo;
+    }
+}

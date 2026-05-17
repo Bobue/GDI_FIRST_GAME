@@ -1,0 +1,6 @@
+﻿  MyFirstWndGame.cpp
+C:\Users\ksy38\source\repos\C++HomeWork\C++HomeWork\MyFirstWndGame.cpp(185,13): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\ksy38\source\repos\C++HomeWork\C++HomeWork\MyFirstWndGame.cpp(186,13): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\ksy38\source\repos\C++HomeWork\C++HomeWork\MyFirstWndGame.cpp(246,61): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\ksy38\source\repos\C++HomeWork\C++HomeWork\MyFirstWndGame.cpp(246,40): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  C++HomeWork.vcxproj -> C:\Users\ksy38\source\repos\C++HomeWork\x64\Debug\C++HomeWork.exe
