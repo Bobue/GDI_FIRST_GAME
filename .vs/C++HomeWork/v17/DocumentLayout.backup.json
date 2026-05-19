@@ -1,18 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ksy38\\source\\repos\\C\u002B\u002BHomeWork\\",
+  "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\GDI_FIRST_GAME\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{82DD8551-3B87-4EE8-AFB4-957D5174ECD7}|C\u002B\u002BHomeWork\\C\u002B\u002BHomeWork.vcxproj|C:\\Users\\ksy38\\source\\repos\\C\u002B\u002BHomeWork\\C\u002B\u002BHomeWork\\MyFirstWndGame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{82DD8551-3B87-4EE8-AFB4-957D5174ECD7}|C\u002B\u002BHomeWork\\C\u002B\u002BHomeWork.vcxproj|solutionrelative:C\u002B\u002BHomeWork\\MyFirstWndGame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{82DD8551-3B87-4EE8-AFB4-957D5174ECD7}|C\u002B\u002BHomeWork\\C\u002B\u002BHomeWork.vcxproj|C:\\Users\\User\\source\\repos\\GDI_FIRST_GAME\\C\u002B\u002BHomeWork\\GDI_FIRST_GAME.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{82DD8551-3B87-4EE8-AFB4-957D5174ECD7}|C\u002B\u002BHomeWork\\C\u002B\u002BHomeWork.vcxproj|solutionrelative:C\u002B\u002BHomeWork\\GDI_FIRST_GAME.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{82DD8551-3B87-4EE8-AFB4-957D5174ECD7}|C\u002B\u002BHomeWork\\C\u002B\u002BHomeWork.vcxproj|C:\\Users\\ksy38\\source\\repos\\C\u002B\u002BHomeWork\\C\u002B\u002BHomeWork\\MyFirstWndGame.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{82DD8551-3B87-4EE8-AFB4-957D5174ECD7}|C\u002B\u002BHomeWork\\C\u002B\u002BHomeWork.vcxproj|C:\\Users\\User\\source\\repos\\GDI_FIRST_GAME\\C\u002B\u002BHomeWork\\INC_Windows.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{82DD8551-3B87-4EE8-AFB4-957D5174ECD7}|C\u002B\u002BHomeWork\\C\u002B\u002BHomeWork.vcxproj|solutionrelative:C\u002B\u002BHomeWork\\INC_Windows.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82DD8551-3B87-4EE8-AFB4-957D5174ECD7}|C\u002B\u002BHomeWork\\C\u002B\u002BHomeWork.vcxproj|C:\\Users\\User\\source\\repos\\GDI_FIRST_GAME\\C\u002B\u002BHomeWork\\NzWndBase.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{82DD8551-3B87-4EE8-AFB4-957D5174ECD7}|C\u002B\u002BHomeWork\\C\u002B\u002BHomeWork.vcxproj|solutionrelative:C\u002B\u002BHomeWork\\NzWndBase.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82DD8551-3B87-4EE8-AFB4-957D5174ECD7}|C\u002B\u002BHomeWork\\C\u002B\u002BHomeWork.vcxproj|C:\\Users\\User\\source\\repos\\GDI_FIRST_GAME\\C\u002B\u002BHomeWork\\MyFirstWndGame.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{82DD8551-3B87-4EE8-AFB4-957D5174ECD7}|C\u002B\u002BHomeWork\\C\u002B\u002BHomeWork.vcxproj|solutionrelative:C\u002B\u002BHomeWork\\MyFirstWndGame.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82DD8551-3B87-4EE8-AFB4-957D5174ECD7}|C\u002B\u002BHomeWork\\C\u002B\u002BHomeWork.vcxproj|C:\\Users\\ksy38\\source\\repos\\C\u002B\u002BHomeWork\\C\u002B\u002BHomeWork\\C\u002B\u002BHomeWork.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{82DD8551-3B87-4EE8-AFB4-957D5174ECD7}|C\u002B\u002BHomeWork\\C\u002B\u002BHomeWork.vcxproj|solutionrelative:C\u002B\u002BHomeWork\\C\u002B\u002BHomeWork.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,43 +26,54 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MyFirstWndGame.cpp",
-              "DocumentMoniker": "C:\\Users\\ksy38\\source\\repos\\C\u002B\u002BHomeWork\\C\u002B\u002BHomeWork\\MyFirstWndGame.cpp",
-              "RelativeDocumentMoniker": "C\u002B\u002BHomeWork\\MyFirstWndGame.cpp",
-              "ToolTip": "C:\\Users\\ksy38\\source\\repos\\C\u002B\u002BHomeWork\\C\u002B\u002BHomeWork\\MyFirstWndGame.cpp",
-              "RelativeToolTip": "C\u002B\u002BHomeWork\\MyFirstWndGame.cpp",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAAFgAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-05-17T14:16:14.224Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MyFirstWndGame.h",
-              "DocumentMoniker": "C:\\Users\\ksy38\\source\\repos\\C\u002B\u002BHomeWork\\C\u002B\u002BHomeWork\\MyFirstWndGame.h",
-              "RelativeDocumentMoniker": "C\u002B\u002BHomeWork\\MyFirstWndGame.h",
-              "ToolTip": "C:\\Users\\ksy38\\source\\repos\\C\u002B\u002BHomeWork\\C\u002B\u002BHomeWork\\MyFirstWndGame.h",
-              "RelativeToolTip": "C\u002B\u002BHomeWork\\MyFirstWndGame.h",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABQAAAATAAAAAAAAAA==",
+              "Title": "INC_Windows.h",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GDI_FIRST_GAME\\C\u002B\u002BHomeWork\\INC_Windows.h",
+              "RelativeDocumentMoniker": "C\u002B\u002BHomeWork\\INC_Windows.h",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\GDI_FIRST_GAME\\C\u002B\u002BHomeWork\\INC_Windows.h",
+              "RelativeToolTip": "C\u002B\u002BHomeWork\\INC_Windows.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-05-17T14:15:55.443Z",
+              "WhenOpened": "2026-05-19T09:09:31.449Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "C\u002B\u002BHomeWork.cpp",
-              "DocumentMoniker": "C:\\Users\\ksy38\\source\\repos\\C\u002B\u002BHomeWork\\C\u002B\u002BHomeWork\\C\u002B\u002BHomeWork.cpp",
-              "RelativeDocumentMoniker": "C\u002B\u002BHomeWork\\C\u002B\u002BHomeWork.cpp",
-              "ToolTip": "C:\\Users\\ksy38\\source\\repos\\C\u002B\u002BHomeWork\\C\u002B\u002BHomeWork\\C\u002B\u002BHomeWork.cpp",
-              "RelativeToolTip": "C\u002B\u002BHomeWork\\C\u002B\u002BHomeWork.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAMAAAAAAAAAA==",
+              "Title": "NzWndBase.h",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GDI_FIRST_GAME\\C\u002B\u002BHomeWork\\NzWndBase.h",
+              "RelativeDocumentMoniker": "C\u002B\u002BHomeWork\\NzWndBase.h",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\GDI_FIRST_GAME\\C\u002B\u002BHomeWork\\NzWndBase.h",
+              "RelativeToolTip": "C\u002B\u002BHomeWork\\NzWndBase.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxMAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-05-19T09:08:38.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MyFirstWndGame.h",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GDI_FIRST_GAME\\C\u002B\u002BHomeWork\\MyFirstWndGame.h",
+              "RelativeDocumentMoniker": "C\u002B\u002BHomeWork\\MyFirstWndGame.h",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\GDI_FIRST_GAME\\C\u002B\u002BHomeWork\\MyFirstWndGame.h",
+              "RelativeToolTip": "C\u002B\u002BHomeWork\\MyFirstWndGame.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-05-19T09:07:11.774Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GDI_FIRST_GAME.cpp",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GDI_FIRST_GAME\\C\u002B\u002BHomeWork\\GDI_FIRST_GAME.cpp",
+              "RelativeDocumentMoniker": "C\u002B\u002BHomeWork\\GDI_FIRST_GAME.cpp",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\GDI_FIRST_GAME\\C\u002B\u002BHomeWork\\GDI_FIRST_GAME.cpp",
+              "RelativeToolTip": "C\u002B\u002BHomeWork\\GDI_FIRST_GAME.cpp",
+              "ViewState": "AgIAAIsAAAAAAAAAAAAUwLQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-05-10T11:54:15.036Z",
               "EditorCaption": ""

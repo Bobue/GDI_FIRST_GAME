@@ -24,6 +24,7 @@
     <ProjectGuid>{82dd8551-3b87-4ee8-afb4-957d5174ecd7}</ProjectGuid>
     <RootNamespace>CHomeWork</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>GDI_FIRST_GAME</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -123,24 +124,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="C++HomeWork.cpp" />
-    <ClCompile Include="Collider.cpp" />
-    <ClCompile Include="GameObject.cpp" />
-    <ClCompile Include="GameTimer.cpp" />
-    <ClCompile Include="MyFirstWndGame.cpp" />
-    <ClCompile Include="NzWndBase.cpp" />
-    <ClCompile Include="RenderHelp.cpp" />
-    <ClCompile Include="Utillity.cpp" />
+    <ClCompile Include="GDI_FIRST_GAME.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Collider.h" />
-    <ClInclude Include="GameObject.h" />
-    <ClInclude Include="GameTimer.h" />
     <ClInclude Include="INC_Windows.h" />
     <ClInclude Include="MyFirstWndGame.h" />
     <ClInclude Include="NzWndBase.h" />
-    <ClInclude Include="RenderHelp.h" />
-    <ClInclude Include="Utillity.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
